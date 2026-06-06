@@ -2,7 +2,7 @@
 // components/HeroSection.tsx
 
 import Image from "next/image";
-import { Mail, Code2, ChevronDown, MapPin, GitFork, Link2, Globe } from "lucide-react";
+import { Mail, ChevronDown, MapPin, GitFork, Link2, Globe } from "lucide-react";
 import { PERSONAL, EXPERIENCE } from "../lib/data";
 
 const Github = GitFork;

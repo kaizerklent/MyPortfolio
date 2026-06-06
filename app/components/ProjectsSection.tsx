@@ -1,6 +1,6 @@
 // components/ProjectsSection.tsx
 
-import { GitFork, ArrowUpRight, Star } from "lucide-react";
+import { GitFork, ArrowUpRight,} from "lucide-react";
 import SectionHeader from "../components/SectionHeader";
 import { PROJECTS } from "../lib/data";
 
@@ -58,9 +58,6 @@ function ProjectCard({ project: p }: { project: Project }) {
               {t}
             </span>
           ))}
-        </div>
-        <div className="flex items-center gap-1 text-white/30 text-xs font-mono">
-          <Star size={12} /> {p.stars.toLocaleString()}
         </div>
       </div>
     </div>

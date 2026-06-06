@@ -1,4 +1,4 @@
-import { Globe, Terminal, Database, Layers } from "lucide-react";
+import { Globe, Terminal, Database,} from "lucide-react";
 
 // ─── Personal Info ────────────────────────────────────────────────────────────
 export const PERSONAL = {
@@ -14,7 +14,7 @@ export const PERSONAL = {
   linkedin: "linkedin.com/in/kaizer-klent-auceran-2b75b83b9/",
   available: false,
   experience: "Intern",
-  projects: "10+",
+  projects: "6",
   certifications: "TBD",
 };
 
@@ -27,26 +27,20 @@ export const SKILLS = [
   {
     category: "Frontend",
     icon: Globe,
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    items: ["HTML", "CSS", "React", "Next.js", "TypeScript", "Tailwind CSS"],
     color: "#00e5ff",
   },
   {
     category: "Backend",
     icon: Terminal,
-    items: ["Node.js", "Python", "REST APIs"],
+    items: ["Node.js", "Python", "REST APIs",],
     color: "#b388ff",
   },
   {
     category: "Database",
     icon: Database,
-    items: ["PostgreSQL", "MongoDB", "MSSQL"],
+    items: ["PostgreSQL", "MSSQL", "Firebase",],
     color: "#69ff47",
-  },
-  {
-    category: "Cloud & DevOps",
-    icon: Layers,
-    items: ["AWS", "Docker"],
-    color: "#ffd740",
   },
 ];
 
@@ -54,71 +48,65 @@ export const SKILLS = [
 // TODO Phase 3: Replace with your real projects
 export const PROJECTS = [
   {
-    title: "NeuralDash",
+    title: "TruckAlert",
     description:
-      "A real-time analytics platform powered by ML models. Processes 2M+ events/day with sub-50ms latency.",
-    tags: ["Next.js", "Python", "ClickHouse", "Kafka", "Docker"],
-    stars: 1240,
+      "IOT-Driven Blind Spot Detection and Alert System for Large Vehicle. A real-time safety solution using ultrasonic sensors and AI to prevent accidents and save lives.",
+    tags: ["Java", "COCO dataset", "Arduino", "Efficient_lite1"],
     live: "https://neuraldash.io",
-    github: "https://github.com",
+    github: "https://github.com/ReyySensei/TruckAlert.git",
     featured: true,
     gradient: "from-cyan-500/20 to-blue-600/20",
     accent: "#00e5ff",
   },
   {
-    title: "FlowForm",
+    title: "TravelSafe",
     description:
-      "A drag-and-drop form builder with conditional logic, webhooks, and beautiful analytics.",
-    tags: ["React", "Node.js", "PostgreSQL", "Redis"],
-    stars: 892,
+      "A mobile application designed to enhance travel safety by providing real-time update, booking features, sharing experiences and notes",
+    tags: ["React native", "Node.js", "tailwindcss", "Firebase"],
     live: "https://flowform.app",
-    github: "https://github.com",
+    github: "https://github.com/kaizerklent/TravelSafe.git",
     featured: true,
     gradient: "from-violet-500/20 to-purple-600/20",
     accent: "#b388ff",
   },
   {
-    title: "Cadence API",
+    title: "Mojo Store",
     description:
-      "Open-source rate-limiting and API gateway middleware. Supports token bucket, sliding window, and fixed window algorithms.",
-    tags: ["Go", "Redis", "Docker", "gRPC"],
-    stars: 2100,
+      "A inventory management system for tracking and managing stock levels and orders.",
+    tags: ["Java", "MSSQL"],
     live: null,
-    github: "https://github.com",
+    github: "https://github.com/kaizerklent/MojoStore.git",
     featured: true,
     gradient: "from-emerald-500/20 to-green-600/20",
     accent: "#69ff47",
   },
   {
-    title: "PixelVault",
+    title: "5th-CRG-IMS",
     description:
-      "NFT marketplace with lazy minting, IPFS storage, and gasless transactions.",
-    tags: ["Next.js", "Solidity", "ethers.js", "IPFS"],
-    stars: 456,
+      "is a web-based internal admin tool built for the 5th Civil Relations Group — a military unit — to manage their physical assets, borrowing activity, and vehicle fleet.",
+    tags: ["Next.js", "Firebase", "tailwindcss", "typescript"],
     live: "https://pixelvault.xyz",
-    github: "https://github.com",
+    github: "https://github.com/kaizerklent/5th-CRG-IMS.git",
     featured: false,
     gradient: "from-orange-500/20 to-red-600/20",
     accent: "#ffd740",
   },
   {
-    title: "TerraWatch",
+    title: "5thCRG Inventory Management System",
     description:
-      "Infrastructure monitoring tool that predicts cost overruns and security misconfigurations.",
-    tags: ["Python", "AWS", "Terraform", "ML"],
-    stars: 378,
+      "is a web-based internal admin tool built for the 5th Civil Relations Group — a military unit — to manage their physical assets, borrowing activity, and vehicle fleet.",
+    tags: ["Next.js", "Firebase", "tailwindcss", "typescript"],
     live: null,
-    github: "https://github.com",
+    github: "https://github.com/kaizerklent/Inventory_System.git",
     featured: false,
     gradient: "from-pink-500/20 to-rose-600/20",
     accent: "#ff6090",
   },
   {
-    title: "Typist",
+    title: "RecipeHub",
     description:
       "A minimalist markdown editor with real-time collaboration, AI suggestions, and one-click publishing.",
     tags: ["React", "Y.js", "OpenAI", "Supabase"],
-    stars: 612,
     live: "https://typist.dev",
     github: "https://github.com",
     featured: false,

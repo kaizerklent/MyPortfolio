@@ -69,7 +69,7 @@ export default function ContactSection() {
 
           {/* ── Right: Contact Form ── */}
           {/* TODO: Wire up form submission (e.g. Formspree, EmailJS, or API route) */}
-          <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+          <form suppressHydrationWarning className="space-y-5" onSubmit={(e) => e.preventDefault()}>
             <div className="grid grid-cols-2 gap-5">
               <div>
                 <label className="block text-white/40 text-xs font-mono mb-2">NAME</label>
