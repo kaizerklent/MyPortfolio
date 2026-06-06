@@ -83,7 +83,7 @@ export const PROJECTS = [
   {
     title: "5th-CRG-IMS",
     description:
-      "is a web-based internal admin tool built for the 5th Civil Relations Group — a military unit — to manage their physical assets, borrowing activity, and vehicle fleet.",
+      "A web-based internal admin tool built for the 5th Civil Relations Group a military unit to manage their physical assets, borrowing activity, and vehicle fleet.",
     tags: ["Next.js", "Firebase", "tailwindcss", "typescript"],
     live: "https://pixelvault.xyz",
     github: "https://github.com/kaizerklent/5th-CRG-IMS.git",
@@ -94,7 +94,7 @@ export const PROJECTS = [
   {
     title: "5thCRG Inventory Management System",
     description:
-      "is a web-based internal admin tool built for the 5th Civil Relations Group — a military unit — to manage their physical assets, borrowing activity, and vehicle fleet.",
+      "A web-based internal admin tool built for the 5th Civil Relations Group a military unit to manage their physical assets, borrowing activity, and vehicle fleet.",
     tags: ["Next.js", "Firebase", "tailwindcss", "typescript"],
     live: null,
     github: "https://github.com/kaizerklent/Inventory_System.git",
@@ -105,10 +105,10 @@ export const PROJECTS = [
   {
     title: "RecipeHub",
     description:
-      "A minimalist markdown editor with real-time collaboration, AI suggestions, and one-click publishing.",
-    tags: ["React", "Y.js", "OpenAI", "Supabase"],
+      "A collaborative recipe sharing platform with real-time editing, suggestions, and personalized meal planning features.",
+    tags: ["Django", "Python", "db.sqllite3", "JavaScript", "HTML", "CSS"],
     live: "https://typist.dev",
-    github: "https://github.com",
+    github: "https://github.com/kaizerklent/RecipeHub.git",
     featured: false,
     gradient: "from-sky-500/20 to-indigo-600/20",
     accent: "#40c4ff",
@@ -116,55 +116,68 @@ export const PROJECTS = [
 ];
 
 // ─── Certificates ─────────────────────────────────────────────────────────────
-// TODO Phase 4: Replace with your real certificates
+// Place these PDF files inside your /public/certificates/ folder:
+//   - cisco-english-it.pdf
+//   - free-data-analyst.pdf
+//   - advanced-python.pdf
+//   - intro-sql-365.pdf
+//   - sql-365datascience.pdf
+
 export const CERTIFICATES = [
   {
-    title: "AWS Solutions Architect Professional",
-    issuer: "Amazon Web Services",
-    date: "Mar 2024",
-    expires: "Mar 2027",
-    credentialId: "AWS-SAP-0042891",
-    color: "#ff9900",
-  },
-  {
-    title: "Certified Kubernetes Administrator",
-    issuer: "Cloud Native Computing Foundation",
-    date: "Jan 2024",
-    expires: "Jan 2027",
-    credentialId: "CKA-2400-099123",
-    color: "#326ce5",
-  },
-  {
-    title: "Google Cloud Professional Data Engineer",
-    issuer: "Google Cloud",
-    date: "Nov 2023",
-    expires: "Nov 2025",
-    credentialId: "GCP-PDE-202311",
-    color: "#4285f4",
-  },
-  {
-    title: "HashiCorp Terraform Associate",
-    issuer: "HashiCorp",
-    date: "Sep 2023",
-    expires: "Sep 2025",
-    credentialId: "HCTA-2300-7821",
-    color: "#844fba",
-  },
-  {
-    title: "MongoDB Professional Developer",
-    issuer: "MongoDB University",
-    date: "Jun 2023",
+    title: "English for IT: People and Quantities",
+    issuer: "Cisco Networking Academy × OpenEDG",
+    date: "Jun 05, 2026",
     expires: "Lifetime",
-    credentialId: "MDB-PRO-78203",
-    color: "#00ed64",
+    credentialId: "—",
+    color: "#00bceb",
+    accent: "#00bceb",
+    pdf: "/certificates/EnglishforITPeopleandQuantitiesv120260605-32-g2g7cs.pdf",
+    category: "Language & Communication",
   },
   {
-    title: "Meta Frontend Developer",
-    issuer: "Meta / Coursera",
-    date: "Feb 2023",
+    title: "Free Data Analyst Course",
+    issuer: "365 Data Science",
+    date: "Mar 24, 2026",
     expires: "Lifetime",
-    credentialId: "META-FE-20230201",
-    color: "#1877f2",
+    credentialId: "9997466",
+    color: "#f97316",
+    accent: "#f97316",
+    pdf: "/certificates/9997466_7715277_1774330973432.pdf",
+    category: "Data & Analytics",
+  },
+  {
+    title: "Advanced Python",
+    issuer: "365 Data Science",
+    date: "Apr 21, 2026",
+    expires: "Lifetime",
+    credentialId: "10134116",
+    color: "#a78bfa",
+    accent: "#a78bfa",
+    pdf: "/certificates/10134116_7715277_1776744485776.pdf",
+    category: "Programming",
+  },
+  {
+    title: "Introduction to SQL",
+    issuer: "365 Data Science",
+    date: "Jun 03, 2026",
+    expires: "Lifetime",
+    credentialId: "10303773",
+    color: "#34d399",
+    accent: "#34d399",
+    pdf: "/certificates/10303773_7715277_1780524353486.pdf",
+    category: "Database",
+  },
+  {
+    title: "SQL",
+    issuer: "365 Data Science",
+    date: "Nov 07, 2024",
+    expires: "Lifetime",
+    credentialId: "CC-0B7723BA97",
+    color: "#fbbf24",
+    accent: "#fbbf24",
+    pdf: "/certificates/CC-0B7723BA97.pdf",
+    category: "Database",
   },
 ];
 
@@ -172,21 +185,21 @@ export const CERTIFICATES = [
 // TODO Phase 2: Replace with your real experience
 export const EXPERIENCE = [
   {
-    role: "Senior Software Engineer",
-    company: "Stripe",
-    period: "2022 – Present",
-    desc: "Architected payment infrastructure serving 15M+ daily transactions.",
+    role: "Fullstack Developer",
+    company: "5th Civil Relations Group",
+    period: "2026 – Present",
+    desc: "A web-based internal admin tool built for the 5th Civil Relations Group a military unit to manage their physical assets, borrowing activity, and vehicle fleet.",
   },
   {
-    role: "Full-Stack Developer",
-    company: "Vercel",
-    period: "2020 – 2022",
-    desc: "Built core features for the deployment platform used by 200k+ developers.",
+    role: "Backend Developer",
+    company: "Holy Cross of Davao College",
+    period: "2025 - 2026",
+    desc: "School Capstone project and an IOT project for the Drivers",
   },
   {
-    role: "Software Engineer",
-    company: "Startup Studio",
-    period: "2019 – 2020",
-    desc: "Shipped 4 SaaS products from zero to revenue within 12 months.",
+    role: "Fullstack Developer",
+    company: "Holy Cross of Davao College",
+    period: "2022 - 2026",
+    desc: "School projects and Self learning projects.",
   },
 ];

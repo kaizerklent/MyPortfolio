@@ -13,7 +13,7 @@ import { X, Download, Printer } from "lucide-react";
 import Image from "next/image";
 
 // ── CONFIG — change these two lines to match your file ───────────────────────
-const RESUME_FILE = "@/public/CV.pdf";       // path inside /public
+const RESUME_FILE = "/CV.pdf";       // path inside /public
 const RESUME_TYPE: "pdf" | "image" = "pdf"; // "pdf" or "image"
 // ─────────────────────────────────────────────────────────────────────────────
 

@@ -1,0 +1,76 @@
+.modalHeader {
+  background: var(--cert-color-10);
+}
+
+.iconBox {
+  background: var(--cert-color-20);
+  border: 1px solid var(--cert-color-40);
+}
+
+.certIcon {
+  color: var(--cert-color);
+}
+
+.thumbnailHeight {
+  height: 180px;
+}
+
+.iframePreview {
+  height: 500px;
+  transform: scale(0.38);
+  transform-origin: top left;
+  width: 263%;
+  pointer-events: none;
+}
+
+.categoryBadge {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--cert-color-20);
+  color: var(--cert-color);
+  border: 1px solid var(--cert-color-30);
+}
+
+.viewHint {
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cert-color-30);
+  border: 1px solid var(--cert-color-50);
+}
+
+.viewHintIcon {
+  color: var(--cert-color);
+}
+
+.cardIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--cert-color-15);
+  border: 1px solid var(--cert-color-30);
+}
+
+.bottomAccent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  opacity: 0;
+  background: linear-gradient(90deg, transparent, var(--cert-color), transparent);
+  transition: opacity 0.3s ease;
+}
+
+.certCard:hover .bottomAccent {
+  opacity: 1;
+}

@@ -1,10 +1,48 @@
+"use client";
 // components/ContactSection.tsx
 
+import { useState } from "react";
 import { Mail, Phone, MapPin, Globe } from "lucide-react";
 import SectionHeader from "../components/SectionHeader";
 import { PERSONAL } from "../lib/data";
 
+const FORMSPREE_ID = "xvznzbwe";
+
+type FormState = "idle" | "sending" | "success" | "error";
+
 export default function ContactSection() {
+  const [formState, setFormState] = useState<FormState>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setFormState("sending");
+    setErrorMsg("");
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (res.ok) {
+        setFormState("success");
+        form.reset();
+      } else {
+        const json = await res.json();
+        setErrorMsg(json?.errors?.[0]?.message ?? "Something went wrong. Please try again.");
+        setFormState("error");
+      }
+    } catch {
+      setErrorMsg("Network error. Please check your connection and try again.");
+      setFormState("error");
+    }
+  }
+
   return (
     <section id="contact" className="py-32">
       <div className="max-w-6xl mx-auto px-6">
@@ -68,13 +106,14 @@ export default function ContactSection() {
           </div>
 
           {/* ── Right: Contact Form ── */}
-          {/* TODO: Wire up form submission (e.g. Formspree, EmailJS, or API route) */}
-          <form suppressHydrationWarning className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div className="grid grid-cols-2 gap-5">
               <div>
                 <label className="block text-white/40 text-xs font-mono mb-2">NAME</label>
                 <input
                   type="text"
+                  name="name"
+                  required
                   placeholder="Juan Dela Cruz"
                   className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-white/20 focus:outline-none focus:border-cyan-400/50 transition-colors"
                 />
@@ -83,6 +122,8 @@ export default function ContactSection() {
                 <label className="block text-white/40 text-xs font-mono mb-2">EMAIL</label>
                 <input
                   type="email"
+                  name="email"
+                  required
                   placeholder="juan@company.com"
                   className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-white/20 focus:outline-none focus:border-cyan-400/50 transition-colors"
                 />
@@ -93,6 +134,8 @@ export default function ContactSection() {
               <label className="block text-white/40 text-xs font-mono mb-2">SUBJECT</label>
               <input
                 type="text"
+                name="subject"
+                required
                 placeholder="Project inquiry / Job opportunity"
                 className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-white/20 focus:outline-none focus:border-cyan-400/50 transition-colors"
               />
@@ -102,18 +145,36 @@ export default function ContactSection() {
               <label className="block text-white/40 text-xs font-mono mb-2">MESSAGE</label>
               <textarea
                 rows={5}
+                name="message"
+                required
                 placeholder="Tell me about your project..."
                 className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-white/20 focus:outline-none focus:border-cyan-400/50 transition-colors resize-none"
               />
             </div>
 
+            {/* Success message */}
+            {formState === "success" && (
+              <div className="px-4 py-3 rounded-xl bg-emerald-400/10 border border-emerald-400/30 text-emerald-400 text-sm font-mono">
+                ✓ Message sent! I&apos;ll get back to you soon.
+              </div>
+            )}
+
+            {/* Error message */}
+            {formState === "error" && (
+              <div className="px-4 py-3 rounded-xl bg-red-400/10 border border-red-400/30 text-red-400 text-sm font-mono">
+                ✕ {errorMsg}
+              </div>
+            )}
+
             <button
               type="submit"
-              className="w-full py-4 bg-cyan-400 text-[#080b14] font-bold rounded-xl hover:bg-cyan-300 transition-colors text-sm"
+              disabled={formState === "sending" || formState === "success"}
+              className="w-full py-4 bg-cyan-400 text-[#080b14] font-bold rounded-xl hover:bg-cyan-300 transition-colors text-sm disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send Message →
+              {formState === "sending" ? "Sending..." : formState === "success" ? "Message Sent ✓" : "Send Message →"}
             </button>
           </form>
+
         </div>
       </div>
     </section>
