@@ -69,13 +69,13 @@ export default function ContactSection() {
                   icon: Phone,
                   label: "Phone",
                   value: PERSONAL.phone,
-                  href: "#",
+                  href: "",
                 },
                 {
                   icon: MapPin,
                   label: "Location",
                   value: PERSONAL.location,
-                  href: "#",
+                  href: "",
                 },
                 {
                   icon: Globe,

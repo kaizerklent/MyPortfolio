@@ -85,7 +85,7 @@ export const PROJECTS = [
     description:
       "A web-based internal admin tool built for the 5th Civil Relations Group a military unit to manage their physical assets, borrowing activity, and vehicle fleet.",
     tags: ["Next.js", "Firebase", "tailwindcss", "typescript"],
-    live: "https://pixelvault.xyz",
+    live: "https://5thcrg.vercel.app/",
     github: "https://github.com/kaizerklent/5th-CRG-IMS.git",
     featured: false,
     gradient: "from-orange-500/20 to-red-600/20",

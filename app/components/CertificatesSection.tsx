@@ -31,7 +31,7 @@ function CertModal({ cert, onClose }: { cert: Cert; onClose: () => void }) {
               <Award size={16} style={{ color: cert.color }} />
             </div>
             <div>
-              <p className="text-white font-bold text-sm leading-tight">{cert.title}</p>
+              <p className="text-white/25 font-bold text-sm leading-tight">{cert.title}</p>
               <p className="text-white/40 text-xs font-mono mt-0.5">{cert.issuer}</p>
             </div>
           </div>
@@ -148,8 +148,8 @@ function CertCard({ cert, onClick }: { cert: Cert; onClick: () => void }) {
         <div className="mt-4 pt-4 border-t border-white/5 flex items-center justify-between">
           <div className="flex gap-4">
             <div>
-              <p className="text-white/25 text-[10px] font-mono uppercase">Issued</p>
-              <p className="text-white/55 text-xs mt-0.5">{cert.date}</p>
+              <p className="text-white/50 text-[10px] font-mono uppercase">Issued</p>
+              <p className="text-white/60 text-xs mt-0.5">{cert.date}</p>
             </div>
             <div>
               <p className="text-white/25 text-[10px] font-mono uppercase">Expires</p>
